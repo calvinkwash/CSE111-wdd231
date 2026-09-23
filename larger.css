@@ -1,0 +1,94 @@
+```css
+@media screen and (min-width: 640px) {
+
+    .site-header {
+        padding: 1rem 2rem;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    #main-nav {
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: flex-end;
+
+        gap: 0.4rem;
+
+        margin-top: 1rem;
+    }
+
+    .brand h1 {
+        font-size: 1.6rem;
+    }
+
+
+    .hero-content {
+        left: 2rem;
+        right: auto;
+        bottom: 2rem;
+
+        max-width: 520px;
+
+        padding: 1.3rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+
+    .forecast {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    .spotlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    footer {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        text-align: left;
+
+        gap: 2rem;
+
+        padding: 2rem;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+
+    .site-header {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 2rem;
+    }
+
+    #main-nav {
+        margin-top: 0;
+    }
+
+
+    .home-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .spotlight-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+```
