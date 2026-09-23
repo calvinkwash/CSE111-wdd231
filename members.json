@@ -1,0 +1,67 @@
+   json
+[
+    {
+        "name": "Boksburg Business Solutions",
+        "address": "15 Main Street, Boksburg, Gauteng",
+        "phone": "+27 11 000 1001",
+        "website": "https://Bksolution@gmail.com",
+        "image": "boksburg1.jpg",
+        "membership": 3,
+        "description": "Business consulting and professional support for local companies."
+    },
+    {
+        "name": "East Rand Accounting",
+        "address": "22 Commissioner Street, Boksburg, Gauteng",
+        "phone": "+27 11 000 1002",
+        "website": "https://ercounting@gmail.com",
+        "image": "boksburg2.jpg",
+        "membership": 2,
+        "description": "Accounting, bookkeeping, and financial services."
+    },
+    {
+        "name": "Boksburg Print and Design",
+        "address": "8 Market Road, Boksburg, Gauteng",
+        "phone": "+27 694757429",
+        "website": "https://Bpdesign@gmail.com.com",
+        "image": "boksburg3.jpg",
+        "membership": 1,
+        "description": "Printing, branding, signs, and graphic design services."
+    },
+    {
+        "name": "East Rand Technology Hub",
+        "address": "31 Leeuwpoort Road, Boksburg, Gauteng",
+        "phone": "+27 11 000 1004",
+        "website": "https://calvinhub@gmail.com",
+        "image": "boksburg4.jpg",
+        "membership": 3,
+        "description": "Technology solutions and business IT support."
+    },
+    {
+        "name": "Boksburg Property Group",
+        "address": "44 Trichardts Road, Boksburg, Gauteng",
+        "phone": "+27 11 000 1005",
+        "website": "https://calvinkwash@gmail.com",
+        "image": "boksburg5.jpg",
+        "membership": 2,
+        "description": "Property sales, rentals, and commercial property services."
+    },
+    {
+        "name": "Golden East Catering",
+        "address": "17 Park Road, Boksburg, Gauteng",
+        "phone": "+27 11 000 1006",
+        "website": "https://jaydenkwash@gmail.com",
+        "image": "boksburg6.jpg",
+        "membership": 1,
+        "description": "Catering and event food services."
+    },
+    {
+        "name": "Boksburg Logistics Services",
+        "address": "63 North Rand Road, Boksburg, Gauteng",
+        "phone": "+27 11 000 1007",
+        "website": "https://jadengh@gmail.com",
+        "image": "boksburg7.jpg",
+        "membership": 3,
+        "description": "Local delivery, logistics, and transportation services."
+    }
+]
+```
