@@ -1,79 +1,382 @@
+
 <!DOCTYPE html>
-<html lang="en"
+<html lang="en">
 <head>
-    <meta charset="=UTF-8"
-    <meta name="viewport" content="width-width, intial-scale=
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Boksburg chamber of commerce  | Directory</title>
-
-    <meta name="desctription" content="bussiness Directory for the Boksburg
+    <meta name="description" content="Welcome to the Boksburg Chamber of Commerce. Discover local businesses, events, weather, and business opportunities.">
     <meta name="author" content="Malvin Kwashira">
 
-    <link rel="icon" href="images/favicon.png">
+    <meta property="og:title" content="Boksburg Chamber of Commerce">
+    <meta property="og:description" content="Building a stronger local business community in Boksburg.">
+    <meta property="og:image" content="images/boksburg-hero.jpg">
+    <meta property="og:url" content="index.html">
+    <meta property="og:type" content="website">
 
-    <meta property="og:title" content="Boksburg Chamber of Commerce | Directory">
-    <meta property="og:description" content="Explore businesses"  and member of Boksburg Chamber in Commerce.">
-    <meta property="og:images" content="images/chamber-social.jpg">
-    <meta property="og:url" content="https://YOUR-USERNAME.github.io/wdd231/chamber/directory.html">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/small.css">
     <link rel="stylesheet" href="css/larger.css">
-</header>
 
-<div class="header-container">
- <a href="directory.html">
-        <img src="images/boksburg-business-solutions.png.png" alt="Boksburg Chamber Logo">
-             
-        
+    <title>Boksburg Chamber of Commerce | Home</title>
+</head>
 
+<body>
 
-    </a>
+<header class="site-header">
 
-</div>
-     <p class="site-name">Boksburg Chamber of Commerce</p>
-     <p class="site-tagline">Building a stronger local bussiness community</p>
-</div>     
+    <div class="brand">
+        <img src="images/boksburg.jpg.png"
+             alt="Boksburg Chamber of Commerce logo">
 
-<nav>
-    <button id="menu-button" aria-label="Toggle menu">=</button>
-        
-    <ul id="navigation">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">join</a></li>
-        <li><a href="discover.html">discover</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>  
+        <div>
+            <h1>Boksburg Chamber of Commerce</h1>
+        </div>
+    </div>
+
+    <button id="menu-button" aria-label="Open navigation menu">
+        ☰
+    </button>
+
+    <nav id="main-nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+        <a href="discover.html">Discover</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
 </header>
 
 <main>
-    <h1>Business Directory</h1>
 
-    <div class="directory-buttons">
-        <button id="grid-button">Grid-button">
-        <button id="list-button">List</button>
+    <section class="hero">
+
+        <img src="images/boksburg6.jpg"
+             alt="Boksburg business community">
+
+        <div class="hero-content">
+            <h2>Grow Your Business in Boksburg</h2>
+
+            <p>
+                Connect with local businesses, discover opportunities,
+                and strengthen our community.
+            </p>
+
+            <a class="cta" href="join.html">
+                Join the Chamber
+            </a>
+        </div>
+
+    </section>
+
+
+    <div class="home-grid">
+
+        <section class="home-section">
+
+            <h2>Current Events</h2>
+
+            <article class="event-card">
+                <h3>Local Business Networking</h3>
+
+                <p>
+                    <strong>Date:</strong>
+                    20 September 2026
+                </p>
+
+                <p>
+                    Meet local entrepreneurs and build valuable
+                    business connections.
+                </p>
+            </article>
+
+
+            <article class="event-card">
+
+                <h3>Small Business Workshop</h3>
+
+                <p>
+                    <strong>Date:</strong>
+                    3 October 2026
+                </p>
+
+                <p>
+                    Learn practical ways to grow and promote
+                    your small business.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <section class="home-section weather">
+
+            <h2>Weather in Boksburg</h2>
+
+            <div id="current-weather">
+                <p>Loading current weather...</p>
+            </div>
+
+            <div id="forecast" class="forecast"></div>
+
+        </section>
+
     </div>
+
+
+    <section class="home-section">
+
+        <h2>Member Spotlights</h2>
+
+        <div id="spotlights" class="spotlight-grid">
+
+            <p>Loading member spotlights...</p>
+
+        </div>
+
+    </section>
+
 </main>
 
-<footer>
-    <div class="footer-contact">
-        <h2>Boksburg Chamber of Commerce</h2>
-        <p>123 Main Street, Boksburg, South Africa</p>
-        <p>Email: info@boksburgchamber.org.za</p>
-        <p>Phone: +27 694757429</p>
 
-    </div> class="footer-development">
-        <p> 2024 Boksburg Chamber of Commerce. All rights reserved.</p>
-        <p>WDD 231</p>
-        <p>Website developed by Malvin Kwashira</p>
+<footer>
+
+    <div>
+
+        <h2>Boksburg Chamber of Commerce</h2>
+
+        <p>
+            123 Main Street, Boksburg, South Africa
+        </p>
+
+        <p>
+            Email: info@boksburgchamber.org.za
+        </p>
+
+        <p>
+            Phone: +27 69 475 7429
+        </p>
+
     </div>
+
+
+    <div>
+
+        <p>
+            &copy;
+            <span id="current-year"></span>
+            Boksburg Chamber of Commerce.
+            All rights reserved.
+        </p>
+
+        <p>WDD 231</p>
+
+        <p>
+            Website developed by Malvin Kwashira
+        </p>
+
+        <p>
+            Last Modified:
+            <span id="last-modified"></span>
+        </p>
+
+    </div>
+
 </footer>
 
-        <script src="js/directory.js"></script>
 
-        
+<script src="js/home.js"></script>
+
 </body>
 </html>
+```
+">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Welcome to the Boksburg Chamber of Commerce. Discover local businesses, events, weather, and business opportunities.">
+    <meta name="author" content="Malvin Kwashira">
+
+    <meta property="og:title" content="Boksburg Chamber of Commerce">
+    <meta property="og:description" content="Building a stronger local business community in Boksburg.">
+    <meta property="og:image" content="images/boksburg7.jpg">
+    <meta property="og:url" content="index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/larger.css">
+
+    <title>Boksburg Chamber of Commerce | Home</title>
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="brand">
+        <img src="images/boksburg2.jpg"
+             alt="Boksburg Chamber of Commerce logo">
+
+        <div>
+            <h1>Boksburg Chamber of Commerce</h1>
+            <p>Building a stronger local business community</p>
+        </div>
+    </div>
+
+    <button id="menu-button" aria-label="Open navigation menu">
+        ☰
+    </button>
+
+    <nav id="main-nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+        <a href="discover.html">Discover</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<main>
+
+    <section class="hero">
+
+        <img src="images/boksburg3.jpg"
+             alt="Boksburg business community">
+
+        <div class="hero-content">
+            <h2>Grow Your Business in Boksburg</h2>
+
+            <p>
+                Connect with local businesses, discover opportunities,
+                and strengthen our community.
+            </p>
+
+            <a class="cta" href="join.html">
+                Join the Chamber
+            </a>
+        </div>
+
+    </section>
+
+
+    <div class="home-grid">
+
+        <section class="home-section">
+
+            <h2>Current Events</h2>
+
+            <article class="event-card">
+                <h3>Local Business Networking</h3>
+
+                <p>
+                    <strong>Date:</strong>
+                    20 September 2026
+                </p>
+
+                <p>
+                    Meet local entrepreneurs and build valuable
+                    business connections.
+                </p>
+            </article>
+
+
+            <article class="event-card">
+
+                <h3>Small Business Workshop</h3>
+
+                <p>
+                    <strong>Date:</strong>
+                    3 October 2026
+                </p>
+
+                <p>
+                    Learn practical ways to grow and promote
+                    your small business.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <section class="home-section weather">
+
+            <h2>Weather in Boksburg</h2>
+
+            <div id="current-weather">
+                <p>Loading current weather...</p>
+            </div>
+
+            <div id="forecast" class="forecast"></div>
+
+        </section>
+
+    </div>
+
+
+    <section class="home-section">
+
+        <h2>Member Spotlights</h2>
+
+        <div id="spotlights" class="spotlight-grid">
+
+            <p>Loading member spotlights...</p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+
+        <h2>Boksburg Chamber of Commerce</h2>
+
+        <p>
+            123 Main Street, Boksburg, South Africa
+        </p>
+
+        <p>
+            Email: info@boksburgchamber.org.za
+        </p>
+
+        <p>
+            Phone: +27 69 475 7429
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <p>
+            &copy;
+            <span id="current-year"></span>
+            Boksburg Chamber of Commerce.
+            All rights reserved.
+        </p>
+
+        <p>WDD 231</p>
+
+        <p>
+            Website developed by Malvin Kwashira
+        </p>
+
+        <p>
+            Last Modified:
+            <span id="last-modified"></span>
+        </p>
+
+    </div>
