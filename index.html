@@ -2,381 +2,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Welcome to the Boksburg Chamber of Commerce. Discover local businesses, events, weather, and business opportunities.">
-    <meta name="author" content="Malvin Kwashira">
-
-    <meta property="og:title" content="Boksburg Chamber of Commerce">
-    <meta property="og:description" content="Building a stronger local business community in Boksburg.">
-    <meta property="og:image" content="images/boksburg-hero.jpg">
-    <meta property="og:url" content="index.html">
-    <meta property="og:type" content="website">
-
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/small.css">
-    <link rel="stylesheet" href="css/larger.css">
-
-    <title>Boksburg Chamber of Commerce | Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StudyMate helps students track grades, discover books, and learn new words.">
+  <meta name="author" content="Your Name">
+  <meta name="theme-color" content="#173b6c">
+  <title>StudyMate | Student Success Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" type="module"></script>
 </head>
-
 <body>
-
-<header class="site-header">
-
-    <div class="brand">
-        <img src="images/boksburg.jpg.png"
-             alt="Boksburg Chamber of Commerce logo">
-
-        <div>
-            <h1>Boksburg Chamber of Commerce</h1>
-        </div>
-    </div>
-
-    <button id="menu-button" aria-label="Open navigation menu">
-        ☰
-    </button>
-
-    <nav id="main-nav">
-        <a class="active" href="index.html">Home</a>
-        <a href="directory.html">Directory</a>
-        <a href="join.html">Join</a>
-        <a href="discover.html">Discover</a>
-        <a href="contact.html">Contact</a>
+  <header class="site-header">
+    <a class="logo" href="#home">StudyMate</a>
+    <nav aria-label="Main navigation">
+      <a href="#grades">Grades</a>
+      <a href="#books">Books</a>
+      <a href="#dictionary">Dictionary</a>
     </nav>
+  </header>
 
-</header>
-
-<main>
-
-    <section class="hero">
-
-        <img src="images/boksburg6.jpg"
-             alt="Boksburg business community">
-
-        <div class="hero-content">
-            <h2>Grow Your Business in Boksburg</h2>
-
-            <p>
-                Connect with local businesses, discover opportunities,
-                and strengthen our community.
-            </p>
-
-            <a class="cta" href="join.html">
-                Join the Chamber
-            </a>
-        </div>
-
+  <main id="home">
+    <section class="welcome">
+      <p class="eyebrow">YOUR LEARNING COMPANION</p>
+      <h1>Make every study session count.</h1>
+      <p>Track your progress, find useful books, and build your vocabulary.</p>
     </section>
 
+    <section id="grades" class="panel">
+      <h2>Grade Tracker</h2>
+      <p>Add a subject and grade to calculate your average.</p>
+      <form id="grade-form">
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" required maxlength="60"
+          placeholder="e.g. Web Development">
 
-    <div class="home-grid">
+        <label for="grade">Grade (%)</label>
+        <input id="grade" name="grade" type="number"
+          min="0" max="100" step="0.1" required placeholder="e.g. 85">
 
-        <section class="home-section">
-
-            <h2>Current Events</h2>
-
-            <article class="event-card">
-                <h3>Local Business Networking</h3>
-
-                <p>
-                    <strong>Date:</strong>
-                    20 September 2026
-                </p>
-
-                <p>
-                    Meet local entrepreneurs and build valuable
-                    business connections.
-                </p>
-            </article>
-
-
-            <article class="event-card">
-
-                <h3>Small Business Workshop</h3>
-
-                <p>
-                    <strong>Date:</strong>
-                    3 October 2026
-                </p>
-
-                <p>
-                    Learn practical ways to grow and promote
-                    your small business.
-                </p>
-
-            </article>
-
-        </section>
-
-
-        <section class="home-section weather">
-
-            <h2>Weather in Boksburg</h2>
-
-            <div id="current-weather">
-                <p>Loading current weather...</p>
-            </div>
-
-            <div id="forecast" class="forecast"></div>
-
-        </section>
-
-    </div>
-
-
-    <section class="home-section">
-
-        <h2>Member Spotlights</h2>
-
-        <div id="spotlights" class="spotlight-grid">
-
-            <p>Loading member spotlights...</p>
-
-        </div>
-
+        <button type="submit">Add Grade</button>
+      </form>
+      <p id="average">Average: No grades yet</p>
+      <ul id="grade-list" aria-live="polite"></ul>
     </section>
 
-</main>
+    <section id="books" class="panel">
+      <h2>Discover Study Books</h2>
+      <p>Search the Open Library catalogue for books to support your studies.</p>
+      <form id="book-form">
+        <label for="book-query">Book title or topic</label>
+        <input id="book-query" name="book-query" required
+          placeholder="e.g. JavaScript">
+        <button type="submit">Search Books</button>
+      </form>
+      <p id="book-status" role="status"></p>
+      <div id="book-results" class="results"></div>
+    </section>
 
+    <section id="dictionary" class="panel">
+      <h2>Learn a New Word</h2>
+      <p>Look up a word using the Free Dictionary API.</p>
+      <form id="word-form">
+        <label for="word-query">Enter an English word</label>
+        <input id="word-query" name="word-query" required
+          maxlength="60" placeholder="e.g. perseverance">
+        <button type="submit">Find Meaning</button>
+      </form>
+      <div id="word-result" aria-live="polite"></div>
+    </section>
+  </main>
 
-<footer>
-
-    <div>
-
-        <h2>Boksburg Chamber of Commerce</h2>
-
-        <p>
-            123 Main Street, Boksburg, South Africa
-        </p>
-
-        <p>
-            Email: info@boksburgchamber.org.za
-        </p>
-
-        <p>
-            Phone: +27 69 475 7429
-        </p>
-
-    </div>
-
-
-    <div>
-
-        <p>
-            &copy;
-            <span id="current-year"></span>
-            Boksburg Chamber of Commerce.
-            All rights reserved.
-        </p>
-
-        <p>WDD 231</p>
-
-        <p>
-            Website developed by Malvin Kwashira
-        </p>
-
-        <p>
-            Last Modified:
-            <span id="last-modified"></span>
-        </p>
-
-    </div>
-
-</footer>
-
-
-<script src="js/home.js"></script>
-
+  <footer>
+    <p>&copy; <span id="year"></span> StudyMate Student Dashboard</p>
+    <p>Built with HTML, CSS, and vanilla JavaScript.</p>
+  </footer>
 </body>
 </html>
-```
-">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Welcome to the Boksburg Chamber of Commerce. Discover local businesses, events, weather, and business opportunities.">
-    <meta name="author" content="Malvin Kwashira">
-
-    <meta property="og:title" content="Boksburg Chamber of Commerce">
-    <meta property="og:description" content="Building a stronger local business community in Boksburg.">
-    <meta property="og:image" content="images/boksburg7.jpg">
-    <meta property="og:url" content="index.html">
-    <meta property="og:type" content="website">
-
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/small.css">
-    <link rel="stylesheet" href="css/larger.css">
-
-    <title>Boksburg Chamber of Commerce | Home</title>
-</head>
-
-<body>
-
-<header class="site-header">
-
-    <div class="brand">
-        <img src="images/boksburg2.jpg"
-             alt="Boksburg Chamber of Commerce logo">
-
-        <div>
-            <h1>Boksburg Chamber of Commerce</h1>
-            <p>Building a stronger local business community</p>
-        </div>
-    </div>
-
-    <button id="menu-button" aria-label="Open navigation menu">
-        ☰
-    </button>
-
-    <nav id="main-nav">
-        <a class="active" href="index.html">Home</a>
-        <a href="directory.html">Directory</a>
-        <a href="join.html">Join</a>
-        <a href="discover.html">Discover</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-</header>
-
-<main>
-
-    <section class="hero">
-
-        <img src="images/boksburg3.jpg"
-             alt="Boksburg business community">
-
-        <div class="hero-content">
-            <h2>Grow Your Business in Boksburg</h2>
-
-            <p>
-                Connect with local businesses, discover opportunities,
-                and strengthen our community.
-            </p>
-
-            <a class="cta" href="join.html">
-                Join the Chamber
-            </a>
-        </div>
-
-    </section>
-
-
-    <div class="home-grid">
-
-        <section class="home-section">
-
-            <h2>Current Events</h2>
-
-            <article class="event-card">
-                <h3>Local Business Networking</h3>
-
-                <p>
-                    <strong>Date:</strong>
-                    20 September 2026
-                </p>
-
-                <p>
-                    Meet local entrepreneurs and build valuable
-                    business connections.
-                </p>
-            </article>
-
-
-            <article class="event-card">
-
-                <h3>Small Business Workshop</h3>
-
-                <p>
-                    <strong>Date:</strong>
-                    3 October 2026
-                </p>
-
-                <p>
-                    Learn practical ways to grow and promote
-                    your small business.
-                </p>
-
-            </article>
-
-        </section>
-
-
-        <section class="home-section weather">
-
-            <h2>Weather in Boksburg</h2>
-
-            <div id="current-weather">
-                <p>Loading current weather...</p>
-            </div>
-
-            <div id="forecast" class="forecast"></div>
-
-        </section>
-
-    </div>
-
-
-    <section class="home-section">
-
-        <h2>Member Spotlights</h2>
-
-        <div id="spotlights" class="spotlight-grid">
-
-            <p>Loading member spotlights...</p>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<footer>
-
-    <div>
-
-        <h2>Boksburg Chamber of Commerce</h2>
-
-        <p>
-            123 Main Street, Boksburg, South Africa
-        </p>
-
-        <p>
-            Email: info@boksburgchamber.org.za
-        </p>
-
-        <p>
-            Phone: +27 69 475 7429
-        </p>
-
-    </div>
-
-
-    <div>
-
-        <p>
-            &copy;
-            <span id="current-year"></span>
-            Boksburg Chamber of Commerce.
-            All rights reserved.
-        </p>
-
-        <p>WDD 231</p>
-
-        <p>
-            Website developed by Malvin Kwashira
-        </p>
-
-        <p>
-            Last Modified:
-            <span id="last-modified"></span>
-        </p>
-
-    </div>
